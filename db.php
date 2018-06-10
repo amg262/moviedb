@@ -8,8 +8,8 @@
  */
 class Database {
 	private $user = 'root';
-	private $password = 'root';
-	private $db = 'phpbom';
+	private $password = '';
+	private $db = 'mdb';
 	private $host = 'localhost';
 	private $port = 3306;
 	private $link, $con;
