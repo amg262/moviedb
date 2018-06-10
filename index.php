@@ -126,6 +126,22 @@ echo count( $a->dir );
                 <input type="text" class="form-control" name="poop" id="" placeholder="Input...">
             </div>
 
+
+            <div class="form-group">
+                <label for=""></label>
+                <input type="text" class="form-control" name="poop" id="" placeholder="Input...">
+            </div>
+
+            <div class="form-group">
+                <label for=""></label>
+                <input type="text" class="form-control" name="poop" id="" placeholder="Input...">
+            </div>
+
+            <div class="form-group">
+                <label for=""></label>
+                <input type="text" class="form-control" name="poop" id="" placeholder="Input...">
+            </div>
+
             <button type="submit" class="btn btn-primary|secondary|success|info|warning|danger">Submit</button>
 
         </form>
@@ -133,7 +149,7 @@ echo count( $a->dir );
 
 </div><!-- /.container -->
 
-
+<div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -151,7 +167,7 @@ echo count( $a->dir );
 <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
 <!-- Holder.js for placeholder images -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
-
+</div>
 
 </body>
 </html>
