@@ -19,3 +19,4 @@ wp-content/plugins/hello.php
 .phpintel
 .idea
 node_modules
+package.json
