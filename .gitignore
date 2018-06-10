@@ -17,4 +17,5 @@ wp-content/plugins/hello.php
 /license.txt
 
 .phpintel
-*-tmp
+.idea
+node_modules
