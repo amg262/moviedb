@@ -1,38 +1,34 @@
 <?php
 
 
-class MovieDB
-{
+class MovieDB {
 
-    private $pm2 = 'P:\Movies 2';
-    private $pmt = 'P:\Torrents';
-    private $dm = 'D:\Movies';
-    private $dmt = 'D:\Theater';
-    public $dir;
-    private $dir_files = [];
-    private $file;
-    private $json;
-    private $csv;
-
-
-    /**
-     * Class Constructor
-     */
-    public function __construct()
-    {
-    }
+	public $dir;
+	private $pm2 = 'P:\Movies 2';
+	private $pmt = 'P:\Torrents';
+	private $dm = 'D:\Movies';
+	private $dmt = 'D:\Theater';
+	private $dir_files = [];
+	private $file;
+	private $json;
+	private $csv;
 
 
-    public function scan_dir()
-    {
+	/**
+	 * Class Constructor
+	 */
+	public function __construct() {
+	}
 
 
-        $this->dir = scandir($this->pm2);
+	public function scan_dir() {
 
-        $this->json = json_encode($this->dir);
-    }
+		$this->dir = scandir( $this->pm2, SCANDIR_SORT_NONE );
+
+		$this->json = json_encode( $this->dir );
+	}
 }
 
 $a = new MovieDB();
 $a->scan_dir();
-echo count($a->dir);
+echo count( $a->dir );
