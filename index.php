@@ -12,6 +12,8 @@ include_once __DIR__ . '/db.php';
 $db = new Database();
 $db->connect();
 $db->create_part();
+
+$db->insert('hey dude','blahblahblah','1.9');
 $db->close();
 
 

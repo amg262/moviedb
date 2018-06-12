@@ -51,25 +51,18 @@ class Database {
 		return $var;
 	}
 
-
-	public function create_subassembly() {
-		$sql = "CREATE TABLE `phpbom`.`subassembly` ( `id` INT NOT NULL AUTO_INCREMENT , 
-                `name` VARCHAR(255) NOT NULL , `des` VARCHAR(255) NOT NULL , 
-                `cost` DECIMAL(7,2) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
-
-		$var = mysqli_query( $this->con, $sql );
-
-		return $var;
-	}
-
-	public function create_assembly() {
-		$sql = "CREATE TABLE `phpbom`.`assembly` ( `id` INT NOT NULL AUTO_INCREMENT , 
-                `name` VARCHAR(255) NOT NULL , `des` VARCHAR(255) NOT NULL , 
-                `cost` DECIMAL(7,2) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+	public function insert($name, $des, $cost) {
+		$sql = 'INSERT INTO `part` (`id`, `name`, `des`, `cost`) VALUES (
+				NULL, 
+				\''. $name . '\', 
+				\''. $des . '\', 
+				
+				\'1\')';
 
 		$var = mysqli_query( $this->con, $sql );
 
 		return $var;
 	}
+
 
 }
