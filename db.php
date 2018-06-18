@@ -37,6 +37,12 @@ class Database {
 		$this->con  = mysqli_connect( $this->host, $this->user, $this->password, $this->db, $this->port );
 	}
 
+
+	public function write() {
+
+
+
+	}
 	public function close() {
 		mysqli_close( $this->link );
 	}

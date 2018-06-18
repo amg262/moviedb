@@ -9,13 +9,14 @@ if ( isset( $_POST['poop'] ) ) {
 
 include_once __DIR__ . '/db.php';
 
+/*
 $db = new Database();
 $db->connect();
 $db->create_part();
 
 $db->insert('hey dude','blahblahblah','1.9');
 $db->close();
-
+*/
 
 
 class MovieDB {
@@ -43,12 +44,35 @@ class MovieDB {
 		$this->dir = scandir( $this->pm2, SCANDIR_SORT_NONE );
 
 		$this->json = json_encode( $this->dir );
+
+
+		if (file_exists('mdb.json')) {
+			$data = file_get_contents( 'mdb.json' );
+
+			var_dump(json_encode($data));
+
+		} else {
+			file_put_contents( 'mdb.json', $this->json, LOCK_EX );
+
+		}
+
+
+	}
+
+	public function write() {
+
+		$data = file_get_contents( 'mdb.json' );
+
+		$file = file_put_contents( 'mdb.json', 'data', FILE_APPEND | LOCK_EX );
+
 	}
 }
 
 $a = new MovieDB();
 $a->scan_dir();
 echo count( $a->dir );
+
+
 ?>
 
 
